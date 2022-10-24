@@ -1,10 +1,11 @@
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
-    }
-}
 rootProject.name = "Fipe project"
 include ':app'
+include ':base_feature'
+include ':data'
+include ':data_local'
+include ':data_remote'
+include ':di'
+include ':domain'
+include ':navigation'
+include ':uikit'
+include ':feature'
