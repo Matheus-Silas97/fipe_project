@@ -1,9 +1,3 @@
-apply from: 'versions.gradle'
-apply from: 'libs.gradle'
-apply from: 'testversions.gradle'
-apply from: 'testlibs.gradle'
-apply from: 'testdependencies.gradle'
-apply from: 'dependencies.gradle'
 
 buildscript {
     ext{
@@ -23,6 +17,20 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
+
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.7.20' apply false
+    id 'com.google.devtools.ksp' version '1.7.20-1.0.7'
+}
+
+apply from: 'versions.gradle'
+apply from: 'libs.gradle'
+apply from: 'testversions.gradle'
+apply from: 'testlibs.gradle'
+apply from: 'testdependencies.gradle'
+apply from: 'dependencies.gradle'
+
+
 allprojects {
     repositories {
         google()

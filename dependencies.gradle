@@ -19,7 +19,7 @@ ext {
             [configuration: "implementation", dependency: "$constraintLayout"],
             [configuration: "implementation", dependency: "$material"],
             [configuration: "implementation", dependency: "$glide"],
-            [configuration: "annotationProcessor", dependency: "$glideAnnotation"],
+            [configuration: "ksp", dependency: "$glideAnnotation"],
             [configuration: "implementation", dependency: "$flexbox"],
             [configuration: "implementation", dependency: "$gson"],
             [configuration: "implementation", dependency: "$swiperefreshlayout"]
@@ -57,13 +57,13 @@ ext {
     ]
 
     dataDependencies = commonsDependencies + testDataDependencies + [
-            [configuration: "implementation", dependency: "$room"]
+
     ]
 
     dataLocalDependencies = dataDependencies + testDataLocalDependencies +[
             [configuration: "implementation", dependency: "$gson"],
             [configuration: "implementation", dependency: "$gsonConvertFacotory"],
-            [configuration: "kapt", dependency: "$roomCompiler"],
+            [configuration: "ksp", dependency: "$roomCompiler"],
             [configuration: "implementation", dependency: "$roomKtx"],
             [configuration: "implementation", dependency: "$roomRx"],
             [configuration: "implementation", dependency: "$sqlite"]
